@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
+// Integrantes Lucas Oelschlager, Laureano Juarez, Jeremias Oliva
 int main()
 {
     int array[40][4];
@@ -42,10 +42,21 @@ int main()
                         break;
 
                     case 2:
-
                         printf("HORAS TRABAJADAS: ");
-                        scanf("%d", &array[i][j]);
+
+                        do
+                        {
+                            scanf("%d", &array[i][j]);
+
+                            if (array[i][j] < 0)
+                            {
+                                printf("Ingresaste una hora invalida\n");
+                            }
+
+                        } while (array[i][j] < 0);
+
                         break;
+
                     case 3:
                         do
                         {
